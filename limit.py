@@ -3,11 +3,8 @@ import sys
 '''
 Made a program that calculates the limit of a prespecified function through recursion, it was made on a whim so please excuse any errors
 
-    I somehow came up with a convergence at 29081.85... which i know not to be correct, since we're 
-    allways adding another 30 metric tonnes of radioactive material, but at one point, the first material 
-    that is added would have decayed almost completely, not mathematically, but material is descrete, and we 
-    assume it to be gone by 10 life (99.9 of all material will then be gone https://gyazo.com/12db08e609335745f7dcac29296c3b46) 
-    so at one point it should converge at SOMETHING.
+    Since we know the amount of radioactive material, given x amount is added every [arbitrary unit of time], follows this formula:
+    x(k^1 + k^2 + k^3 + ... + k^n), where k is 2^-1/22.3 since half life is 22.3 years, and matter is added every 1 year.
 '''
 
 def function(n):
@@ -47,7 +44,7 @@ def main():
     print("Initial function:", function_print)
     
     # n = 0 in the summation happens from the getgo.
-    limit_value = limit(n, function(n))
+    limit_value = limit(n, function(n)) 
 
     print(f'limit: {limit_value}')
     
