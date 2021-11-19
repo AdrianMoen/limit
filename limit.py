@@ -4,7 +4,9 @@ import sys
 Made a program that calculates the limit of a prespecified function through recursion, it was made on a whim so please excuse any errors
 
     Since we know the amount of radioactive material, given x amount is added every [arbitrary unit of time], follows this formula:
-    x(k^1 + k^2 + k^3 + ... + k^n), where k is 2^-1/22.3 since half life is 22.3 years, and matter is added every 1 year.
+    a_n= x(k^1 + k^2 + k^3 + ... + k^n), where k is 2^-1/22.3 since half life is 22.3 years, and matter is added every 1 year. We 
+    can be sure that this program will give us the correct result. We can also be sure that it does not converge on 0, as the half 
+    life is too high. Ofcourse x*k alone will converge on zero, but a_n is way above the threshhold
 '''
 
 def function(n):
